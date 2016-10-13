@@ -6,7 +6,7 @@
 	    
 	<menuSection dischTypeName="coldSnack">
 		<dish>
-			<picture>C:\Users\Admin\workspace\home_task\Task7\menu\image1.jfif</picture>
+			<picture>\menu\image1.jfif</picture>
 			<title>Ассорти рыбное</title>
 			<description>
 				<choice>
