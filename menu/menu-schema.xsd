@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <schema 	xmlns="http://www.w3.org/2001/XMLSchema"
 		    targetNamespace="http://www.example.org/menu-schema"
 		    xmlns:tns="http://www.example.org/menu-schema"
@@ -15,8 +16,9 @@
 
 	<complexType name="dischType">
 		<sequence>
-			<element name="dish" type="tns:dish" minOccurs="0" maxOccurs="unbounded" />
+			<element name="dish"  type="tns:dish" minOccurs="0" maxOccurs="unbounded" />
 		</sequence>
+		
 		<attribute name="dischTypeName" use="required">
 			<simpleType>
 				<restriction base="string">
@@ -37,22 +39,18 @@
 		</attribute>
 	</complexType>
 
-	<complexType name="dish">
+	<complexType name="dish" >
 		<sequence>
 			<element name="picture" type="anyURI" />
 			<element name="title" type="string" />
-			<element name="description" type="tns:description" />
-		</sequence>
-	</complexType>
-
-	<complexType name="description">
-		<choice>
 			<element name="description" type="string" />
 			<element name="portion" type="string"/>
 			<element name="price" type="int"/>
-		</choice>
+		</sequence>
+		
+	<attribute name="id" use="required">
+	</attribute>
+	
 	</complexType>
-
-
 
 </schema>
